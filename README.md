@@ -16,6 +16,8 @@ Supported target integrations for the MVP:
 - FortiSIEM
 - Email, Microsoft Teams, Slack or ticket-based notifications
 
+Only one SIEM adapter and one notification channel should be implemented for the first vertical slice.
+
 ## Core flow
 
 ```mermaid
@@ -34,11 +36,31 @@ flowchart LR
 
 The customer receives only the notification and the evidence needed for investigation. The feed management, IOC lifecycle, enrichment logic, queries, workflow execution and backend operation remain provider-managed.
 
-## Repository purpose
+## Start here with Claude
 
-This repository is the source of truth for product requirements, architecture, security requirements, integration contracts, workflow design and the future implementation.
+1. Open the repository in Claude Code.
+2. Ask Claude to read [`CLAUDE.md`](CLAUDE.md).
+3. Use [`prompts/CLAUDE_BOOTSTRAP.md`](prompts/CLAUDE_BOOTSTRAP.md) for the first planning session.
+4. Use [`prompts/FEATURE_TASK_TEMPLATE.md`](prompts/FEATURE_TASK_TEMPLATE.md) for focused implementation sessions.
 
-Start with [`CLAUDE.md`](CLAUDE.md), then read the documents referenced there.
+## Repository map
+
+| Path | Purpose |
+|---|---|
+| `CLAUDE.md` | Always-on project rules, scope and definition of done |
+| `.claude/skills/` | On-demand product, SIEM-adapter and security-review context |
+| `docs/PRODUCT_POSITIONING_HU.md` | Hungarian commercial and service positioning |
+| `docs/PRODUCT_REQUIREMENTS.md` | MVP use cases and non-functional requirements |
+| `docs/ARCHITECTURE.md` | Target components, trust boundaries and deployment direction |
+| `docs/DATA_MODEL.md` | Initial logical domain model |
+| `docs/WORKFLOW_SPEC.md` | End-to-end state machine, retry and deduplication behavior |
+| `docs/INTEGRATION_CONTRACTS.md` | TI, SIEM, enrichment and notification adapter contracts |
+| `docs/SECURITY.md` | Threat model and security gates |
+| `docs/OPERATIONS_AND_SIZING.md` | Monitoring, capacity inputs, risks and recovery |
+| `docs/DELIVERY_PLAN.md` | Ordered delivery phases and initial backlog |
+| `docs/ACCEPTANCE_CRITERIA.md` | Testable MVP completion criteria |
+| `docs/CUSTOMER_ONBOARDING.md` | Presales, access, testing and go-live checklist |
+| `docs/OPEN_DECISIONS.md` | Decisions Claude must not silently make |
 
 ## Important limitation
 
