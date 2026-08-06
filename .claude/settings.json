@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "deny": [
+      "Bash(git push --force*)",
+      "Bash(git push -f*)",
+      "Bash(rm -rf /*)",
+      "Bash(docker system prune*)",
+      "Bash(docker volume prune*)",
+      "Bash(kubectl delete namespace*)",
+      "Bash(terraform destroy*)"
+    ]
+  }
+}
