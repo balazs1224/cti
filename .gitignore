@@ -1,0 +1,62 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+dist/
+build/
+*.egg-info/
+
+# Node and n8n development
+node_modules/
+.next/
+coverage/
+.n8n/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+secrets/
+credentials/
+
+# Local data and databases
+*.db
+*.sqlite
+*.sqlite3
+postgres-data/
+redis-data/
+n8n-data/
+minio-data/
+data/
+
+# Logs and captures
+*.log
+*.pcap
+*.pcapng
+logs/
+
+# Customer or production exports
+customer-data/
+production-data/
+siem-results/
+raw-evidence/
+workflow-executions/
+
+# IDE and OS
+.DS_Store
+.idea/
+.vscode/
+
+# Test artifacts
+playwright-report/
+test-results/
+htmlcov/
